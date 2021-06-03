@@ -2,7 +2,9 @@ const vm = Vue.createApp({
     data() {
         return {
             isPurple: false,
-            selectedColor: ''
+            selectedColor: '',
+            circleSize: 150,
+
         }
     },
     computed: {
