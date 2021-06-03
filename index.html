@@ -14,11 +14,19 @@
 
         <select v-model="selectedColor">
             <option value="">White</option>
+            <!-- text-black and text-orange are assigned in the main.css -->
             <option value="text-black">Black</option>
             <option value="text-orange">Orange</option>
         </select>
-        <!-- utlizing an array [] here allows us to change the circle color and the text color -->
-        <div class=" circle" :class="[selectedColor, circleClasses]">
+
+        <input type="number" v-model="circleSize" /> Purple
+        <!-- for the :class utlizing an array [] here allows us to change the circle color and the text color -->
+        <!-- we can utilize an array again to put multiple styles on the :style attribute -->
+
+        <div class="circle" :class="[selectedColor, circleClasses]" :style="[
+            {width: circleSize + 'px', height: circleSize + 'px', lineHeight: circleSize + 'px'}, 
+            {transform: 'rotate(30deg)'}
+            ]">
             Hi!
         </div>
     </div>
