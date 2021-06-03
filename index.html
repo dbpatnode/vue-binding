@@ -22,6 +22,7 @@
         <input type="number" v-model="circleSize" /> Purple
         <!-- for the :class utlizing an array [] here allows us to change the circle color and the text color -->
         <!-- we can utilize an array again to put multiple styles on the :style attribute -->
+        <!-- circleSize is set initially in app.js -->
 
         <div class="circle" :class="[selectedColor, circleClasses]" :style="[
             {width: circleSize + 'px', height: circleSize + 'px', lineHeight: circleSize + 'px'}, 
